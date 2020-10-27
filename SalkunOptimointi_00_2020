@@ -12,8 +12,10 @@ from scipy import stats
 import matplotlib.pyplot as plt
 
 %matplotlib inline
-
+# tähän tickerit, esim: SP500 = ^GSPC , kulta = GC=F, Nokia= NOK ja 'AAPL', 'MSFT', 'NFLX', 'AMZN', 'GOOG'
+# tickerien määrää voi lisätä jos 5 ei riitä
 tickers = ['AAPL', 'MSFT', 'NFLX', 'AMZN', 'GOOG']
+# Historiallisen datan periodit
 start = datetime.datetime(2010, 1, 1)
 end = datetime.datetime(2020, 9, 30)
 
@@ -46,14 +48,16 @@ def simulate_random_portfolios(num_portfolios, mean_returns, cov, rf):
 
 mean_returns = df.pct_change().mean()
 cov = df.pct_change().cov()
+# tässä Monte Carlo simulointien määrä
 num_portfolios = 100000
+# riskitön korko
 rf = 0.05
 
 results_frame = simulate_random_portfolios(num_portfolios, mean_returns, cov, rf)
 
 #locate position of portfolio with highest Sharpe Ratio
 max_sharpe_port = results_frame.iloc[results_frame['sharpe'].idxmax()]
-#locate positon of portfolio with minimum standard deviation
+#locate position of portfolio with minimum standard deviation
 min_vol_port = results_frame.iloc[results_frame['stdev'].idxmin()]
 #create scatter plot coloured by Sharpe Ratio
 plt.subplots(figsize=(15,10))
