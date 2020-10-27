@@ -1,6 +1,9 @@
 # Projekti 27.10.2020
 
-Estimoi tehokas salkku P. Annetaan Rf riskitön korko ja muutaman arvopaperin tickeri. Ohjelma kertoo optimaaliset painot jokaiselle arvopaperille
+Estimoi tehokas salkku P. Annetaan Rf riskitön korko ja muutaman arvopaperin tickeri. Ohjelma kertoo optimaaliset painot jokaiselle arvopaperille.
+
+Tämä koodi löytyy "SalkunOptimointi_00_2020"
+Testattu toimivaksi
 
 # PortfolioTheory
 Code for estimating Markowitz efficient frontier
