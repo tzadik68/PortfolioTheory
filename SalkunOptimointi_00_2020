@@ -1,6 +1,6 @@
 # Optimoi salkun allokaation 
 # 27.10.2020
-# toimii Juniper notebookissa ainakin!
+# toimii Jupyter notebookissa ehkä parhaiten
 # 
 import pandas as pd  
 import numpy as np
@@ -67,8 +67,8 @@ plt.scatter(max_sharpe_port[1],max_sharpe_port[0],marker=(5,1,0),color='r',s=500
 plt.scatter(min_vol_port[1],min_vol_port[0],marker=(5,1,0),color='g',s=500)
 plt.show()
 
-# Tämä tulostaa optimisalkun P, ainakin Jupyterissä toimii tällä kaskyllä
+# Tämä tulostaa optimisalkun P, ainakin Jupyterissä toimii tällä kaskyllä, mutta PyCharmissa pitää tietysti ympyröidä print() käskyllä
 max_sharpe_port.to_frame().T
 
-# Tämä minimivarianssisalkun Jupyterissä
+# Tämä minimivarianssisalkun Jupyterissä, mutta PyCharmissa pitää tietysti ympyröidä print() käskyllä
 min_vol_port.to_frame().T
